@@ -1,27 +1,13 @@
 # tinyApps
 Tiny programs which can help you keyboard ninjas.
 
-## Index
-### Available Apps
-
-1. [Dataset Maker](#dsmkr)
-2. [OneSpotApp](#onespotapp)
-3. [OneSpotTabs](#onespottabs)
-4. [YTsearch](#ytsearch)
-5. [Crack Checker](#crack-checker)
-6. [EPUB Crawlers](#epub-crawler)
-
-### Miscellaneous
-- [License](#license)<br>
-- [Contributing](#contributing)
-
 ## Installation
 
 You can have the tinyApps too!
 
 To install tinyApps onto your device, you can download one of the releases [here](https://github.com/dat-adi/tinyApps/releases), or download the zip file through the clone feature, else, clone it using the command below.
 ```shell
-git clone https://github.com/dat-adi/tinyApps.git
+git clone https://github.com/Nabeel-Farooq/tinyApps.git
 ```
 
 ## DSMkr
@@ -45,12 +31,6 @@ Using pickle module as a save file for your urls.
 ## YTsearch
 
 A program that acts as a simple search through Youtube, opens up a webpage in the browser, if not already open, and gives you the search results.
-
-## Crack Checker
-
-A program that checks whether or not a specific game is cracked or not, fed from the info from [Crack Watch](https://crackwatch.com/games).<br>
-Yet to be completed, a work in progress, trying to use the [API](https://crackwatch.com/api) provided.
-For more info on crack-checker, click [here](./crack-checker/README.md).
 
 ## EPUB Crawler
 
