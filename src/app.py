@@ -1,15 +1,46 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-# importing various different applications
-from components import crackChecker, datasetMaker, oneSpotApp, oneSpotTabs, YTsearch
+"""
+Application launcher for tinyApps.
+"""
+
+from __future__ import annotations
+
+from components import oneSpotApp
 
 
 class Blueprint:
+    """Application launcher."""
+
     @staticmethod
-    def run():
-        print("Here's a list of tinyApps that are ready to be run!")
-        print("1. oneSpotApp")
-        response = eval(input("> "))
-        App = oneSpotApp.oneSpotApp.mainApp()
-        App.mainloop()
+    def run() -> None:
+        """Display menu and launch selected application."""
+
+        apps = {
+            "1": ("oneSpotApp", oneSpotApp.oneSpotApp.mainApp),
+        }
+
+        print("Available tinyApps:")
+        for key, (name, _) in apps.items():
+            print(f"{key}. {name}")
+
+        choice = input("\nSelect an application: ").strip()
+
+        if choice not in apps:
+            print("Invalid selection.")
+            return
+
+        app_name, app_factory = apps[choice]
+
+        try:
+            print(f"\nLaunching {app_name}...")
+            app = app_factory()
+            app.mainloop()
+
+        except Exception as exc:
+            print(f"Failed to launch {app_name}: {exc}")
+
+
+if __name__ == "__main__":
+    Blueprint.run()
